@@ -1,4 +1,4 @@
-[Посмотреть решение: ](https://rawgit.com/Ludmilishee/TochkaTest/master/index.html)
+[Посмотреть решение](https://rawgit.com/Ludmilishee/TochkaTest/master/index.html)
 
 
 ### TochkaTest
