@@ -1,0 +1,96 @@
+.text {
+    font-family: Geometria, sans-serif;
+    color: #231f20;
+}
+
+h1 {
+    font-size: 32pt;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+h3 {
+    font-size: 16pt;
+}
+
+h1, h2, h3, button {
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.btn-container {
+    display: inline-block;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    background: #ffffff url("../images/button_1.png") left / 100% auto  no-repeat;
+}
+
+button {
+    position: relative;
+    font-size: 14pt;
+    background: none;
+    border: none;
+    width: 220px;
+    height: 45px;
+}
+
+button:focus {
+    outline:0;
+}
+
+button:before, button:after {
+    --btn-border-height: 35%;
+    position: absolute;
+    left: 0;
+    height: var(--btn-border-height);
+    width: 100%;
+    border: solid 2px;
+    content: "";
+}
+
+button:before {
+    top: 0;
+    border-bottom: none;
+}
+
+button:after {
+    top: calc(100% - var(--btn-border-height));
+    border-top: none;
+}
+
+.img-container {
+    --imgs-width: 600px;
+    display: inline-block;
+    width: var(--imgs-width);
+    position: relative;
+}
+
+.img-container img, .img-wallet {
+    position: absolute;
+    width: 100%;
+}
+
+.img-wallet {
+    top: calc(var(--imgs-width) * 0.06);
+    left: calc(var(--imgs-width) * (-0.013));
+}
+
+.icon-container {
+    display: inline-block;
+    position: relative;
+}
+
+.icon-container * {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.icon-container img {
+    padding-right: 15px;
+}
