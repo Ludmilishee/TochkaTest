@@ -91,11 +91,13 @@ a:after {
 .img-container {
     height: 100%;
     position: absolute;
-    top: 70px;
+    top: 0;
     left: 55%;
+    border: solid 1px;
 }
 
 .img-container img {
+    border: solid 1px;
     position: absolute;
     left: 0;
     width: 100%;
@@ -247,15 +249,15 @@ a:after {
     }
 
     .first-block, .second-block {
-        padding-left: 20%;
+        padding-left: 13%;
     }
 
     .first-block-text {
-        width: 38%;
+        width: 35%;
     }
 
     .img-container {
-        width: 800px;
+        width: 50%;
     }
 
     .column-list div {
