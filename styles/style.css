@@ -106,12 +106,6 @@ a:after {
     height: 100%;
     z-index: 1;
     width: 80%
-    /*min-width: 800px;*/
-    /*flex-wrap: wrap;*/
-    /*width: 800px;*/
-    /*flex-shrink: 0;*/
-    /*max-width: 900px;*/
-    /*min-width: 800px;*/
 }
 
 .img-container img {
@@ -274,7 +268,6 @@ a:after {
     }
 
     .img-container {
-        /*left: 0;*/
         width: 80%;
 
     }
