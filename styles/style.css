@@ -1,3 +1,26 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.first-block {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 100px;
+}
+
+.first-block-text {
+    --first-block-width: 50%;
+    width: var(--first-block-width);
+}
+
 .text {
     font-family: Geometria, sans-serif;
     color: #231f20;
@@ -5,17 +28,20 @@
 
 h1 {
     font-size: 32pt;
+    margin: 0 0 50px 0;
 }
 
 h2 {
     font-size: 24pt;
+    margin: 0 0 40px 0;
 }
 
 h3 {
     font-size: 16pt;
+    margin: 0 0 50px 0;
 }
 
-h1, h2, h3, button {
+h1, h2, h3, a {
     font-weight: 600;
 }
 
@@ -31,20 +57,18 @@ h4 {
     background: #ffffff url("../images/button_1.png") left / 100% auto  no-repeat;
 }
 
-button {
+a {
     position: relative;
     font-size: 14pt;
     background: none;
     border: none;
-    width: 220px;
-    height: 45px;
+    padding: 8px 40px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
 }
 
-button:focus {
-    outline:0;
-}
-
-button:before, button:after {
+a:before, a:after {
     --btn-border-height: 35%;
     position: absolute;
     left: 0;
@@ -54,31 +78,42 @@ button:before, button:after {
     content: "";
 }
 
-button:before {
+a:before {
     top: 0;
     border-bottom: none;
 }
 
-button:after {
+a:after {
     top: calc(100% - var(--btn-border-height));
     border-top: none;
 }
 
 .img-container {
-    --imgs-width: 600px;
-    display: inline-block;
-    width: var(--imgs-width);
-    position: relative;
+    --imgs-size: 50%;
+    width: var(--imgs-size);
+    height: 100%;
+    position: absolute;
+    top: -12%;
+    left: 45%;
 }
 
 .img-container img, .img-wallet {
     position: absolute;
+    left: 0;
     width: 100%;
 }
 
 .img-wallet {
-    top: calc(var(--imgs-width) * 0.06);
-    left: calc(var(--imgs-width) * (-0.013));
+    top: calc(var(--imgs-size) * 0.06);
+}
+
+.second-block {
+    padding: 100px;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+}
+
+.column-list div {
+    width: 33%;
 }
 
 .icon-container {
