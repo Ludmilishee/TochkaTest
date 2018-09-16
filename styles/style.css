@@ -11,14 +11,13 @@ body {
 
 .first-block {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
-    padding-left: 100px;
 }
 
-.first-block-text {
-    --first-block-width: 50%;
-    width: var(--first-block-width);
+.big-text {
+    margin-bottom: 50px;
 }
 
 .text {
@@ -27,13 +26,13 @@ body {
 }
 
 h1 {
-    font-size: 32pt;
-    margin: 0 0 50px 0;
+    font-size: 48pt;
+    margin: 0;
 }
 
 h2 {
-    font-size: 24pt;
-    margin: 0 0 40px 0;
+    font-size: 36pt;
+    margin: 0 0 50px 0;
 }
 
 h3 {
@@ -48,6 +47,7 @@ h1, h2, h3, a {
 h4 {
     font-size: 12pt;
     font-weight: normal;
+    margin: 0;
 }
 
 .btn-container {
@@ -89,12 +89,10 @@ a:after {
 }
 
 .img-container {
-    --imgs-size: 50%;
-    width: var(--imgs-size);
     height: 100%;
     position: absolute;
-    top: -12%;
-    left: 45%;
+    top: 70px;
+    left: 55%;
 }
 
 .img-container img {
@@ -135,7 +133,8 @@ a:after {
 }
 
 .column-list div {
-    width: 33%;
+    min-width: 280px;
+    margin-bottom: 20px;
 }
 
 .icon-container {
@@ -150,4 +149,116 @@ a:after {
 
 .icon-container img {
     padding-right: 15px;
+}
+
+@media screen and (max-width: 623px) {
+    h1 {
+        font-size: 24pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    h3 {
+        font-size: 10pt;
+    }
+
+    .text {
+        color: red;
+    }
+
+    .first-block {
+        height: auto;
+    }
+
+    .first-block, .second-block {
+        padding: 50px 30px;
+    }
+
+    .first-block-text {
+        width: 100%;
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .column-list div {
+        width: 100%;
+    }
+}
+
+@media (min-width: 624px) and (max-width: 911px) {
+    .text {
+        color: yellow;
+    }
+
+    .first-block, .second-block {
+        padding-left: 70px;
+    }
+
+    .first-block-text {
+        width: 80%;
+    }
+
+    .img-container {
+        display: none;
+    }
+
+    .column-list div {
+        width: 49%;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 1199px) {
+    .text {
+        color: green;
+    }
+
+    .first-block, .second-block {
+        padding-left: 70px;
+    }
+
+    .first-block-text {
+        width: 60%;
+    }
+
+    .img-container {
+        width: 600px;
+    }
+
+    .column-list div {
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 60pt;
+    }
+
+    h2 {
+        font-size: 48pt;
+    }
+
+    .text {
+        color: blue;
+    }
+
+    .first-block, .second-block {
+        padding-left: 20%;
+    }
+
+    .first-block-text {
+        width: 38%;
+    }
+
+    .img-container {
+        width: 800px;
+    }
+
+    .column-list div {
+        width: 33%;
+    }
 }
