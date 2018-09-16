@@ -97,14 +97,36 @@ a:after {
     left: 45%;
 }
 
-.img-container img, .img-wallet {
+.img-container img {
     position: absolute;
     left: 0;
     width: 100%;
 }
 
+@keyframes soaring {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50px);
+    }
+}
+
 .img-wallet {
-    top: calc(var(--imgs-size) * 0.06);
+    animation: soaring 3s ease-in-out infinite alternate;
+}
+
+@keyframes approaching {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: .4;
+    }
+}
+
+.img-shadow {
+    animation: approaching 3s ease-in-out infinite alternate;
 }
 
 .second-block {
