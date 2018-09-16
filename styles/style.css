@@ -9,22 +9,6 @@ body {
     overflow-x: hidden;
 }
 
-.first-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-
-.big-text {
-    margin-bottom: 50px;
-}
-
-.text {
-    font-family: Geometria, sans-serif;
-    color: #231f20;
-}
-
 h1 {
     font-size: 48pt;
     margin: 0;
@@ -48,6 +32,31 @@ h4 {
     font-size: 12pt;
     font-weight: normal;
     margin: 0;
+}
+
+.first-block {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    z-index: 2;
+}
+
+.big-text {
+    margin-bottom: 50px;
+    white-space: nowrap;
+}
+
+.text {
+    font-family: Geometria, sans-serif;
+    color: #231f20;
 }
 
 .btn-container {
@@ -89,17 +98,24 @@ a:after {
 }
 
 .img-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -7%;
+    left: 0;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 55%;
-    border: solid 1px;
+    z-index: 1;
+    width: 80%
+    /*min-width: 800px;*/
+    /*flex-wrap: wrap;*/
+    /*width: 800px;*/
+    /*flex-shrink: 0;*/
+    /*max-width: 900px;*/
+    /*min-width: 800px;*/
 }
 
 .img-container img {
-    border: solid 1px;
     position: absolute;
-    left: 0;
     width: 100%;
 }
 
@@ -166,10 +182,6 @@ a:after {
         font-size: 10pt;
     }
 
-    .text {
-        color: red;
-    }
-
     .first-block {
         height: auto;
     }
@@ -192,10 +204,6 @@ a:after {
 }
 
 @media (min-width: 624px) and (max-width: 911px) {
-    .text {
-        color: yellow;
-    }
-
     .first-block, .second-block {
         padding-left: 70px;
     }
@@ -214,20 +222,25 @@ a:after {
 }
 
 @media (min-width: 912px) and (max-width: 1199px) {
-    .text {
-        color: green;
+    .first-block {
+        padding-left: 50px;
     }
 
-    .first-block, .second-block {
-        padding-left: 70px;
+    .left-content {
+        left: 8%;
+    }
+
+    .second-block {
+        padding-left: calc(50px + 8%);
     }
 
     .first-block-text {
-        width: 60%;
+        width: 95%;
     }
 
     .img-container {
-        width: 600px;
+        width: 90%;
+
     }
 
     .column-list div {
@@ -244,20 +257,26 @@ a:after {
         font-size: 48pt;
     }
 
-    .text {
-        color: blue;
-    }
-
-    .first-block, .second-block {
+    .first-block {
         padding-left: 13%;
     }
 
+    .left-content {
+        left: 8%;
+    }
+
+    .second-block {
+        padding-left: 21%;
+    }
+
     .first-block-text {
-        width: 35%;
+        width: 70%;
     }
 
     .img-container {
-        width: 50%;
+        /*left: 0;*/
+        width: 80%;
+
     }
 
     .column-list div {
