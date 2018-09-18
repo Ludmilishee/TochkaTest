@@ -12,6 +12,10 @@ body {
     -webkit-box-sizing: border-box;
 }
 
+h1, h2, h3, a {
+    font-weight: 600;
+}
+
 h1 {
     font-size: 48px;
     margin: 0 0 64px 0;
@@ -24,15 +28,12 @@ h2 {
 
 h3 {
     font-size: 16px;
+    line-height: 24px;
     margin: 0 0 64px 0;
 }
 
-h1, h2, h3, a {
-    font-weight: 600;
-}
-
 h4 {
-    font-size: 12pt;
+    font-size: 16px;
     font-weight: normal;
     margin: 0;
 }
@@ -50,10 +51,6 @@ h4 {
     position: relative;
     top: 0;
     z-index: 2;
-}
-
-.big-text {
-    white-space: nowrap;
 }
 
 .text {
@@ -104,6 +101,8 @@ h4 {
     display: inline-block;
     position: relative;
     text-align: center;
+    width: 144px;
+    height: 35px;
 }
 
 .btn-container img {
@@ -125,6 +124,7 @@ a {
     text-align: center;
     text-decoration: none;
     z-index: 2;
+    line-height: 35px;
 }
 
 a:before, a:after {
@@ -169,6 +169,7 @@ a:after {
     h1 {
         font-size: 32px;
         margin-bottom: 48px;
+        width: 286px;
     }
 
     h2 {
@@ -178,35 +179,30 @@ a:after {
 
     h3 {
         font-size: 14px;
+        line-height: 20px;
         margin-bottom: 48px;
     }
-    
-    .btn-container {
-        width: 144px;
-        height: 35px;
+
+    h4 {
+        font-size: 14px;
     }
 
-    a {
-        line-height: 35px;
+    .first-block {
+        padding: 48px 36px 82px 36px;
+    }
+
+    .second-block {
+        padding: 48px 0 64px 36px;
+    }
+
+    .first-block-text {
+        width: 100%;
     }
 
     a:before, a:after {
         height: 14px;
     }
 
-
-    .first-block, .second-block {
-        padding: 48px 0 64px 37px;
-    }
-
-    .first-block {
-        height: auto;
-        padding-bottom: 82px;
-    }
-
-    .first-block-text {
-        width: 100%;
-    }
 
     .img-container {
         display: none;
@@ -222,19 +218,6 @@ a:after {
 }
 
 @media (min-width: 624px) and (max-width: 911px) {
-    .btn-container {
-        width: 144px;
-        height: 31px;
-    }
-
-    a {
-        line-height: 31px;
-    }
-
-    a:before, a:after {
-        height: 12px;
-    }
-
     .first-block {
         padding: 80px 96px 127px 96px;
     }
@@ -245,6 +228,10 @@ a:after {
 
     .first-block-text {
         width: 80%;
+    }
+
+    a:before, a:after {
+        height: 12px;
     }
 
     .img-container {
@@ -261,25 +248,16 @@ a:after {
 }
 
 @media (min-width: 912px) and (max-width: 1199px) {
-    .btn-container {
-        width: 144px;
-        height: 29px;
-    }
-
-    a {
-        line-height: 29px;
-    }
-
-    a:before, a:after {
-        height: 11px;
-    }
-
     .first-block {
-        padding: 220px 0 236px 80px;
+        padding: 220px 0 252px 80px;
     }
 
     .second-block {
         padding: 80px 0 112px 80px;
+    }
+
+    a:before, a:after {
+        height: 11px;
     }
 
     .img-container {
@@ -313,12 +291,17 @@ a:after {
 
     h2 {
         font-size: 56px;
-        margin-bottom: 58px;
+        margin-bottom: 48px;
     }
 
     h3 {
         font-size: 18px;
+        line-height: 28px;
         margin-bottom: 64px;
+    }
+
+    h4 {
+        font-size: 18px;
     }
 
     .first-block {
@@ -333,13 +316,6 @@ a:after {
         width: 70%;
     }
 
-    .img-container {
-        top: -100px;
-        left: -12%;
-        width: 80%;
-        min-width: 50%;
-    }
-
     .btn-container {
         width: 192px;
         height: 42px;
@@ -351,11 +327,19 @@ a:after {
     }
 
     a {
+        font-size: 16px;
         line-height: 42px;
     }
 
     a:before, a:after {
         height: 15px;
+    }
+
+    .img-container {
+        top: -100px;
+        left: -12%;
+        width: 80%;
+        min-width: 50%;
     }
 
     .img-container img {
